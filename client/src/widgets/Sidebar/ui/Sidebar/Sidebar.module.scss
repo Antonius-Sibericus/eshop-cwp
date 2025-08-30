@@ -1,0 +1,16 @@
+.Sidebar {
+  // height: calc(100vh - var(--navbar-height));
+  width: 300px;
+  background: var(--block-primary-color);
+  position: relative;
+  transition: width 0.2s;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.collapsed {
+  width: 80px;
+}

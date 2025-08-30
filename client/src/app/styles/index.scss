@@ -8,4 +8,16 @@
   background: var(--bg-primary-color);
   color: var(--bg-text-color);
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.content-page {
+  flex-grow: 1;
+  display: flex;
+}
+
+.page-wrapper {
+  flex-grow: 1;
+  padding: 18px;
 }

@@ -6,7 +6,7 @@ export function buildLoaders(options: BuildOptions): RuleSetRule[] {
   const { isDev } = options;
 
   const typescriptLoader = {
-    test: /\.tsx?$/,
+    test: /\.tsx?$/i,
     use: 'ts-loader',
     exclude: /node_modules/,
   };
@@ -30,7 +30,23 @@ export function buildLoaders(options: BuildOptions): RuleSetRule[] {
     ],
   };
 
+  const svgLoader = {
+    test: /\.svg$/,
+    use: ['@svgr/webpack']
+  };
+
+  const fileLoader = {
+    test: /\.(png|jpe?g|gif|woff|woff2|ttf)$/i,
+    use: [
+      {
+        loader: 'file-loader',
+      },
+    ],
+  };
+
   return [
+    fileLoader,
+    svgLoader,
     typescriptLoader,
     cssLoader,
   ];

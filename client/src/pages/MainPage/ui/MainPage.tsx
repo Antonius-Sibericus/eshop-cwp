@@ -8,17 +8,19 @@ interface MainPageProps {
 }
 
 const MainPage: FC<MainPageProps> = (props) => {
-  const {
-    className,
-  } = props;
+    const {
+        className,
+    } = props;
 
-  const { t } = useTranslation();
+    const { t } = useTranslation('mainPage');
 
-  return (
+    return (
     // <div className={classNames(cls.MainPage, {}, [className])}>
-    <>Main Page</>
+        <div>
+            {t('title')}
+        </div>
     // </div>
-  );
+    );
 };
 
 export default MainPage;

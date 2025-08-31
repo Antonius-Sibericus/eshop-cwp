@@ -9,16 +9,16 @@ interface NavbarProps {
 }
 
 export const Navbar: FC<NavbarProps> = (props) => {
-  const {
-    className,
-  } = props;
+    const {
+        className,
+    } = props;
 
-  const { t } = useTranslation();
+    const { t } = useTranslation();
 
-  return (
-    <div className={classNames(cls.Navbar, {}, [className])}>
-      <AppLink theme={AppLinkTheme.PLAIN} to={'/'}>Main Page</AppLink>
-      <AppLink theme={AppLinkTheme.PLAIN} to={'/about'}>About Page</AppLink>
-    </div>
-  );
+    return (
+        <div className={classNames(cls.Navbar, {}, [className])}>
+            <AppLink theme={AppLinkTheme.PLAIN} to="/">{t('mainLink')}</AppLink>
+            <AppLink theme={AppLinkTheme.PLAIN} to="/about">{t('aboutLink')}</AppLink>
+        </div>
+    );
 };

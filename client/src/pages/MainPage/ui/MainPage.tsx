@@ -1,6 +1,7 @@
 // import { classNames } from 'shared/lib/classNames/classNames';
 import { FC } from 'react';
 import { useTranslation } from 'react-i18next';
+import { classNames } from 'shared/lib/classNames/classNames';
 import cls from './MainPage.module.scss';
 
 interface MainPageProps {
@@ -16,7 +17,7 @@ const MainPage: FC<MainPageProps> = (props) => {
 
     return (
     // <div className={classNames(cls.MainPage, {}, [className])}>
-        <div>
+        <div className={classNames(cls.MainPage, {}, [className])}>
             {t('title')}
         </div>
     // </div>
